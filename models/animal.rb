@@ -1,4 +1,5 @@
 require_relative( '../db/sql_runner' )
+require_relative('./owner.rb')
 
 
 class Animal
@@ -73,7 +74,7 @@ class Animal
   SqlRunner.run( sql, values )
 end
 
-def self.find( type )
+def self.find(type)
     sql = "SELECT * FROM animals WHERE type = $1"
     values = [type]
     animal = SqlRunner.run( sql, values )
@@ -89,6 +90,21 @@ def self.find( type )
       return result
     end
 
+  def available_for_adoption()
+      sql = "UPDATE animals
+      SET status = 'Available'
+      WHERE id = $1"
+      values = [@id]
+      SqlRunner.run( sql, values )
+    end
 
+    def adopted(owner)
+      sql = "UPDATE animals SET
+      (status, owner_id)
+      = ('Unavailable', $1)
+      WHERE id = $2"
+      values = [owners.id, @id]
+      SqlRunner.run(sql, values)
+    end
 
-end
+  end

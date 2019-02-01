@@ -36,14 +36,35 @@ animal1 = Animal.new({
     "owner_id" => owner1.id
     })
 
+  animal3 = Animal.new({
+      "name" => "Speedy",
+      "type" => "Tortoise",
+      "entry_date" => "2018-06-15",
+      "status" => "Unavaiable",
+      "owner_id" => owner1.id
+      })
+
+  animal4 = Animal.new({
+        "name" => "Chatty",
+        "type" => "Parrot",
+        "entry_date" => "2018-09-23",
+        "status" => "Avaiable",
+        })
+
     animal1.save
     animal2.save
+    animal3.save
+    animal4.save
 
     owner1.name = "Suzie Hunter"
     owner1.update()
 
-    animal1.status = "Available"
-    animal1.update()
+    animal1.available_for_adoption()
+
+    animal4.adopted(owner2)
+
+    # animal1.status = "Available"
+    # animal1.update()
 
     # owner2.delete()
     #
