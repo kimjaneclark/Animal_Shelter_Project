@@ -25,14 +25,14 @@ animal1 = Animal.new({
   "name" => "Stimpy",
   "type" => "Dog",
   "entry_date" => "2018-12-01",
-  "status" => "unavailable"
+  "status" => "Unavailable"
   })
 
   animal2 = Animal.new({
     "name" => "Cleo",
     "type" => "Cat",
     "entry_date" => "2018-11-09",
-    "status" => "Unavaiable",
+    "status" => "Unavailable",
     "owner_id" => owner1.id
     })
 
@@ -40,7 +40,7 @@ animal1 = Animal.new({
       "name" => "Speedy",
       "type" => "Tortoise",
       "entry_date" => "2018-06-15",
-      "status" => "Unavaiable",
+      "status" => "Unavailable",
       "owner_id" => owner1.id
       })
 

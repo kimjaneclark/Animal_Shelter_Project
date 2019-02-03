@@ -74,13 +74,21 @@ class Animal
   SqlRunner.run( sql, values )
 end
 
-def self.find(type)
+def self.find_type(type)
     sql = "SELECT * FROM animals WHERE type = $1"
     values = [type]
     animal = SqlRunner.run( sql, values )
     result = Animal.new( animal.first )
     return result
   end
+
+  def self.find(id)
+      sql = "SELECT * FROM animals WHERE id = $1"
+      values = [id]
+      animal = SqlRunner.run( sql, values )
+      result = Animal.new( animal.first )
+      return result
+    end
 
   def self.available()
       sql = "SELECT * FROM animals WHERE status = $1 AND owner_id IS NULL"
@@ -103,7 +111,7 @@ def self.find(type)
       (status, owner_id)
       = ('Unavailable', $1)
       WHERE id = $2"
-      values = [owners.id, @id]
+      values = [owner.id, @id]
       SqlRunner.run(sql, values)
     end
 

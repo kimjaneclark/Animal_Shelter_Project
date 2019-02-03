@@ -1,0 +1,10 @@
+<p>Name: <%= @animal.name %></p>
+<p>Type: <%= @animal.type %></p>
+<p>EntryDate: <%= @animal.entry_date %></p>
+<p>Status: <%= @animal.status %></p>
+
+<a href="/animals/<%= @animal.id %>/edit">Edit</a>
+
+<form method="post" action="/animals/<%= @animal.id %>/delete">
+<input type="submit" value ="Delete" />
+</form>

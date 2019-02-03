@@ -22,7 +22,26 @@ post '/animals' do
 end
 
 
+get '/animals/:id' do
+  @animal = Animal.find(params[:id].to_i)
+  erb(:"animal/show")
+end
+
 get '/animals/:id/edit' do # edit
-  @animals = Animal.find( params[:id] )
-  erb( :edit )
+  @animal = Animal.find(params['id'] )
+  erb(:"animal/edit")
+end
+
+
+post '/animals/:id' do
+  @animal = Animal.new(params)
+  @animal.update
+  erb(:"animal/edit_confirmation")
+end
+
+
+post '/animals/:id/delete' do
+  @animal = Animal.find(params[:id])
+  @animal.delete()
+  erb(:"animal/delete")
 end

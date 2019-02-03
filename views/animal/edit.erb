@@ -1,18 +1,26 @@
-<form method="post" action="/animals/<%=@animals.id%>">
+<form method="post" action="/animals/<%= @animal.id %>">
   <label for="name">Name:</label>
-  <input type="text" name="name" id="name"/>
+  <input type="text" name="name" id="name" value="<%= @animal.name %>"/>
 
   <label for="type">Type:</label>
-  <input type="type" name="type" id = "type"/>
+  <input type="type" name="type" id = "type" value="<%= @animal.type %>"/>
 
   <label for="entry-date">Entry Date:</label>
-    <input id="entry-date" type="date" name="entry_date"/>
+    <input id="entry-date" type="date" name="entry_date" value="<%= @animal.entry_date %>"/>
 
-  <label for="status">Select animal status:</label>
-    <select id="status" name="status">
-      <option value="Available">Avaiable</option>
-      <option value="Unavaiable">Unavailable</option>
-    </select>
+  <label for="status">Edit animal status:</label>
+  <select name="status" id="status">
+   <option
+   value="Unavailable"
+   <%= "selected" if @animal.status == "Unavailable" %>
+   >Unavailable</option>
+   <option
+   value="Available"
+   <%= "selected" if @animal.status == "Available" %>
+   >Available</option>
+ </select>
+
+
 
 
 
