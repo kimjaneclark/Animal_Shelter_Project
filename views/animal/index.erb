@@ -1,0 +1,11 @@
+<p>ALL Animals</p>
+
+<% @animals.each do |animal| %>
+      <p>Name: <%= animal.name() %></p>
+      <p>Type: <%= animal.type %></p>
+      <p>Entry Date: <%= animal.entry_date %></p>
+      <p> Status: <%= animal.status %></p>
+      <hr />
+    <% end %>
+
+  
