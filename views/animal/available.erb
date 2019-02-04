@@ -1,12 +1,12 @@
-<p>ALL Animals</p>
+<p>Animals available for adoption</p>
 
 <% @animals.each do |animal| %>
       <p>Name: <%= animal.name() %></p>
       <p>Type: <%= animal.type %></p>
       <p>Entry Date: <%= animal.entry_date %></p>
       <p> Status: <%= animal.status %></p>
-      <p><a href="animals/<%= animal.id %>">Show</a></p>
-      <p><a href="animals/<%= animal.id %>/edit">Edit</a></p>
+      <p><a href="<%= animal.id %>">Show</a></p>
+      <p><a href="<%= animal.id %>/adoption">Complete Adoption</a></p>
       <hr />
 
 

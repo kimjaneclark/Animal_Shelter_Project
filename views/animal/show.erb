@@ -3,8 +3,13 @@
 <p>EntryDate: <%= @animal.entry_date %></p>
 <p>Status: <%= @animal.status %></p>
 
-<a href="/animals/<%= @animal.id %>/edit">Edit</a>
 
 <form method="post" action="/animals/<%= @animal.id %>/delete">
 <input type="submit" value ="Delete" />
+</form>
+
+<form method="post" action="/animals/<%= @animal.id %>/ready_for_adoption">
+<input type="submit" value ="Available for adoption" />
+
+
 </form>

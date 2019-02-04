@@ -98,6 +98,14 @@ def self.find_type(type)
       return result
     end
 
+    def self.training()
+        sql = "SELECT * FROM animals WHERE status = $1 AND owner_id IS NULL"
+        values = ["Unavailable"]
+        animals = SqlRunner.run( sql, values)
+        result = animals.map { |animal| Animal.new( animal ) }
+        return result
+      end
+
   def available_for_adoption()
       sql = "UPDATE animals
       SET status = 'Available'

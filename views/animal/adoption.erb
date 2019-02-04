@@ -1,0 +1,19 @@
+<p>Name: <%= @animal.name %></p>
+<p>Type: <%= @animal.type %></p>
+<p>EntryDate: <%= @animal.entry_date %></p>
+<p>Status: <%= @animal.status %></p>
+
+<form method="post" action="/animals/<%= @animal.id %>/adopted">
+
+
+  <label for="owner-id">Select new owner:</label>
+  <select class="owner-dropdown" name="owner_id">
+
+  <% @owners.each do |owner| %>
+      <option value="<%= owner.id %>"><%= owner.name %></option>
+  <% end %>
+    </select>
+
+
+    <input type="submit" value="Confirm adoption" />
+</form>

@@ -1,0 +1,15 @@
+<p>Name: <%= @owner.name %></p>
+<p>Address: <%= @owner.address %></p>
+<p>Contact Number: <%= @owner.contact_num %></p>
+
+
+  <ul>
+  <% @animals.each do |animal| %>
+  <li><%= animal.name %></li>
+  <% end %>
+</ul>
+
+
+<form method="post" action="/owners/<%= @owner.id %>/delete">
+<input type="submit" value ="Delete Owner" />
+</form>

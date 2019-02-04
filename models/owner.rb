@@ -69,13 +69,19 @@ def self.delete_all()
   end
 
   def animals()
-    sql = "SELECT * FROM animals WHERE owner_id = $1"
+    sql = "SELECT name FROM animals WHERE owner_id = $1"
     values = [@id]
     results = SqlRunner.run(sql, values)
     animals = results.map {|animal| Animal.new(animal)}
   return animals
+end
 
+  def self.find(id)
+      sql = "SELECT * FROM owners WHERE id = $1"
+      values = [id]
+      owner = SqlRunner.run( sql, values )
+      result = Owner.new( owner.first )
+      return result
   end
 
-
-end
+  end

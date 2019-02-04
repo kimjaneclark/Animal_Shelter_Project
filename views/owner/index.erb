@@ -1,0 +1,13 @@
+<p>ALL Owners</p>
+
+<% @owners.each do |owner| %>
+      <p>Name: <%= owner.name() %></p>
+      <p>Address: <%= owner.address %></p>
+      <p>Contact number <%= owner.contact_num %></p>
+      <p><a href="owners/<%= owner.id %>">Show Details</a></p>
+      <p><a href="owners/<%= owner.id %>/edit">Edit</a></p>
+
+      <hr />
+
+
+    <% end %>
