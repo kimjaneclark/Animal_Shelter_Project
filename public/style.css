@@ -1,0 +1,36 @@
+* {
+  font-family: 'PT Sans', sans-serif;
+}
+
+body {
+  background-image: url('/adorable-animal-blur-406014.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+
+.topnav {
+  background-color: lightblue;
+  text-align: center;
+}
+
+
+select {
+ width: 150px;
+ padding: 5px 35px 5px 5px;
+ margin: 15px 0;
+ font-size: 0.8em;
+ -webkit-appearance: none;
+ font-family: 'Merriweather', serif;
+ border: 1px solid #eee;
+ display: block;
+}
