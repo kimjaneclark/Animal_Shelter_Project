@@ -14,5 +14,5 @@ CREATE TABLE animals(
   type VARCHAR(255),
   entry_date DATE,
   status VARCHAR(255) not null,
-  owner_id INT8 references owners(id) ON DELETE CASCADE
+  owner_id INT8 references owners(id) ON DELETE SET NULL
 );

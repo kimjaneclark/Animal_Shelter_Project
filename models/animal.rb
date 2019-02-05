@@ -75,6 +75,12 @@ class Animal
   SqlRunner.run( sql, values )
 end
 
+def delete_owner()
+  sql = "UPDATE animals SET owner_id = NULL WHERE id = $1"
+  values = [@id]
+  SqlRunner.run( sql, values )
+end
+
 def self.find_type(type)
     sql = "SELECT * FROM animals WHERE type = $1"
     values = [type]
