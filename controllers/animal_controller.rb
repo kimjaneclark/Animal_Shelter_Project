@@ -8,6 +8,7 @@ also_reload( '../models/*' )
 
 get '/animals' do
   @animals = Animal.all()
+  @owners = Owner.all()
   erb(:"animal/index")
 end
 
@@ -24,6 +25,8 @@ get '/animals/training' do
   @animals = Animal.training()
   erb(:"animal/training")
 end
+
+
 
 
 post '/animals' do

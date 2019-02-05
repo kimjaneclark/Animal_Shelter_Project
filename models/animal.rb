@@ -1,5 +1,6 @@
 require_relative( '../db/sql_runner' )
 require_relative('./owner.rb')
+require('pry')
 
 
 class Animal
@@ -122,5 +123,17 @@ def self.find_type(type)
       values = [owner.id, @id]
       SqlRunner.run(sql, values)
     end
+
+
+    def owner()
+      sql = "SELECT * FROM owners WHERE id = $1"
+      values = [@owner_id]
+      results = SqlRunner.run(sql, values)
+    if results.count > 0
+        owner = Owner.new( results.first)
+        return owner
+      end
+      return nil
+  end
 
   end

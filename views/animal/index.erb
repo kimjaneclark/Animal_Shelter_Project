@@ -5,6 +5,10 @@
       <p>Type: <%= animal.type %></p>
       <p>Entry Date: <%= animal.entry_date %></p>
       <p> Status: <%= animal.status %></p>
+      <%if animal.owner != nil %>
+      <p> Owner: <%= animal.owner.name %></p>
+<% end %>
+
       <p><a href="animals/<%= animal.id %>">Show</a></p>
       <p><a href="animals/<%= animal.id %>/edit">Edit</a></p>
       <hr />
