@@ -2,35 +2,36 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
     <title>Animal Shelter</title>
   </head>
-  <body>
-    <body>
-      <ul>
-            <li>
-              <a href="/">Home</a>
-            </li>
-            <li>
-              <a href="/animals">View all Animals</a>
-            </li>
-            <li>
-        <a href="/animals/new">Add new animal</a>
-      </li>
-      <li>
-        <a href="/animals/available">Animals currently available</a>
-      </li>
-      <li>
-        <a href="/animals/training">Animals in training</a>
-      </li>
-      <li>
-        <a href="/owners">View all Owners</a>
-      </li>
-      <li>
-        <a href="/owners/new">Add new Owners</a>
-      </li>
-
-          </ul>
+  <body style = "../public/adorable-animal-blur-406014.jpg;">
+    <nav class="topnav">
+      <ul style="list-style-type:none;">
+        <li>
+          <a href="/" >Home</a>
+        </li>
+        <li>
+          <a href="/animals">View all Animals</a>
+        </li>
+        <li>
+          <a href="/animals/new">Add new animal</a>
+        </li>
+        <li>
+          <a href="/animals/available">Animals currently available</a>
+        </li>
+        <li>
+          <a href="/animals/training">Animals in training</a>
+        </li>
+        <li>
+          <a href="/owners">View all Owners</a>
+        </li>
+        <li>
+          <a href="/owners/new">Add new Owners</a>
+        </li>
+      </ul>
+    </nav>
   <%= yield %>
-
   </body>
 </html>

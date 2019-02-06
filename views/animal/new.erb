@@ -1,19 +1,27 @@
+
 <form method="post" action="/animals">
-  <label for="name">Name:</label>
-  <input type="text" name="name" id="name"/>
+  <div class="new_wrapper">
 
-  <label for="type">Type:</label>
-  <input type="text" name="type" id = "type"/>
-
-  <label for="entry-date">Entry Date:</label>
-    <input id="entry-date" type="date" name="entry_date"/>
-
-  <label for="status">Select animal status:</label>
+  <div class="row_wrapper">
+  <label class="data_label" for="name">Name:</label>
+  <input class="data_input" type="text" name="name" id="name"/>
+</div>
+<div class="row_wrapper">
+  <label class="data_label" for="type">Type:</label>
+  <input class="data_input" type="text" name="type" id = "type"/>
+</div>
+<div class="row_wrapper">
+  <label class="data_label" for="entry-date">Entry Date:</label>
+    <input class="data_input" id="entry-date" type="date" name="entry_date"/>
+    </div>
+<div class="row_wrapper">
+  <label class="options_label" for="status">Select status:</label>
     <select id="status" name="status">
-      <option value="Available">Available</option>
-      <option value="Unavailable">Unavailable</option>
+      <option class="data_input" value="Available">Available</option>
+      <option class="data_input" value="Unavailable">Unavailable</option>
     </select>
-
+</div>
 
     <input type="submit" value="Add Animal" />
+      </div>
 </form>

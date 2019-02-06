@@ -1,14 +1,20 @@
 <form method="post" action="/owners">
-  <label for="name">Name:</label>
-  <input type="text" name="name" id="name"/>
+  <div class="new_wrapper">
 
-  <label for="address">Address:</label>
-  <input type="text" name="address" id = "address"/>
-
-  <label for="contact-num">Contact Number:</label>
-    <input id="contact-num" type="text" name="contact_num"/>
-
+  <div class="row_wrapper">
+  <label class="data_label" for="name">Name:</label>
+  <input class="data_input" type="text" name="name" id="name"/>
+</div>
+  <div class="row_wrapper">
+  <label class="data_label" for="address">Address:</label>
+  <input class="data_input" type="text" name="address" id = "address"/>
+</div>
+<div class="row_wrapper">
+  <label class="data_label" for="contact-num">Contact No:</label>
+    <input class="data_input" id="contact-num" type="text" name="contact_num"/>
+</div>
 
 
     <input type="submit" value="Add Owner" />
+  </div>
 </form>

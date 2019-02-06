@@ -1,7 +1,10 @@
+<div class="new_wrapper">
+<div class="index_wrapper">
 <p>Name: <%= @animal.name %></p>
 <p>Type: <%= @animal.type %></p>
 <p>EntryDate: <%= @animal.entry_date %></p>
 <p>Status: <%= @animal.status %></p>
+
 
 
 <form method="post" action="/animals/<%= @animal.id %>/delete">
@@ -10,6 +13,6 @@
 
 <form method="post" action="/animals/<%= @animal.id %>/ready_for_adoption">
 <input type="submit" value ="Available for adoption" />
-
-
 </form>
+</div>
+</div>

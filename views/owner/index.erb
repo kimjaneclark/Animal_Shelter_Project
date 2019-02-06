@@ -1,6 +1,9 @@
 <p>ALL Owners</p>
+<div class="new_wrapper">
+
 
 <% @owners.each do |owner| %>
+<div class="index_wrapper">
       <p>Name: <%= owner.name() %></p>
       <p>Address: <%= owner.address %></p>
       <p>Contact number <%= owner.contact_num %></p>
@@ -9,5 +12,8 @@
 
       <hr />
 
-
+</div>
     <% end %>
+
+
+</div>

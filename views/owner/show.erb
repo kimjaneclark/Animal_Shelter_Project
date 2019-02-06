@@ -1,3 +1,5 @@
+<div class="new_wrapper">
+<div class="index_wrapper">
 <p>Name: <%= @owner.name %></p>
 <p>Address: <%= @owner.address %></p>
 <p>Contact Number: <%= @owner.contact_num %></p>
@@ -11,3 +13,5 @@
 
 <form method="post" action="/owners/<%= @owner.id %>/delete">
 <input type="submit" value ="Delete Owner" />
+</div>
+</div>

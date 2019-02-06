@@ -1,16 +1,18 @@
 <form method="post" action="/owners/<%= @owner.id %>">
-  <label for="name">Name:</label>
-  <input type="text" name="name" id="name" value="<%= @owner.name %>"/>
+    <div class="new_wrapper">
+      <div class="row_wrapper">
+        <label class="data_label" for="name">Name:</label>
+        <input class="data_input" type="text" name="name" id="name" value="<%= @owner.name %>"/>
+      </div>
+      <div class="row_wrapper">
+        <label class="data_label" for="address">Type:</label>
+        <input class="data_input" type="text" name="address" id = "address" value="<%= @owner.address %>"/>
+      </div>
+      <div class="row_wrapper">
+        <label class="data_label" for="contact-num">Entry Date:</label>
+        <input class="data_input" id="contact-num" type="text" name="contact_num" value="<%= @owner.contact_num %>"/>
+      </div>
 
-  <label for="address">Type:</label>
-  <input type="text" name="address" id = "address" value="<%= @owner.address %>"/>
-
-  <label for="contact-num">Entry Date:</label>
-    <input id="contact-num" type="text" name="contact_num" value="<%= @owner.contact_num %>"/>
-
-
-
-
-
-  <input type='submit' value="Edit Owner">
+      <input type='submit' value="Edit Owner">
+    </div>
 </form>
